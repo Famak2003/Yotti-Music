@@ -1,4 +1,4 @@
-const admin = require("../admin");
+const admin = require("./admin");
 
 async function createUser(email, password) {
     try {
