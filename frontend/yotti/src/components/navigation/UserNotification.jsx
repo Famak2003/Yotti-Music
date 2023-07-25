@@ -3,9 +3,17 @@ import USER from "./../../assets/user.png";
 
 export default function UserNotification() {
   return (
-    <div className=" flex h-[100%] w-[100%] items-center justify-center gap-5 bg-white px-[2rem]">
-      <img className=" object-contain " src={NOTIFICATION} alt="notification" />
-      <img className=" object-contain " src={USER} alt="user" />
-    </div>
+    <ul className=" correctHeight flex w-[100%] items-center justify-center  gap-9 pl-[3rem] pr-[4rem]">
+      <li className=" w-[1rem] min-w-[.7rem] ">
+        <img
+          className=" h-4 object-contain "
+          src={NOTIFICATION}
+          alt="notification"
+        />
+      </li>
+      <li className="w-[1rem] min-w-[.7rem] ">
+        <img className="  h-4 object-contain " src={USER} alt="user" />
+      </li>
+    </ul>
   );
 }

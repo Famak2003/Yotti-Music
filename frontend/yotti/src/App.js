@@ -4,7 +4,7 @@ import Nav from "./components/navigation/Nav";
 
 function App() {
   return (
-    <div className=" w-full">
+    <div className="">
       <Nav />
     </div>
   );
