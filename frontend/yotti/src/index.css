@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+body {
+  background-image: linear-gradient(black, gray);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: fill;
+}
+
+/* https://dev.to.afif/o-made-100-css-loaders-for-your-next-project-4eje */
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(#333 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 50%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@layer components {
+  .playFunction {
+    @apply flex h-[100%] w-[1rem] min-w-[0.5rem] items-center;
+  }
+  .zimba {
+    @apply hidden rounded-lg;
+  }
+
+  .borderColor {
+    @apply ring-1 ring-red-600;
+  }
+  .blueBorder {
+    @apply ring-1 ring-blue-500;
+  }
+  .correctScale {
+    transform: scale(0.8);
+  }
+  .correctHeight {
+    height: inherit;
+    /* border: 1px solid green; */
+  }
+  .musicGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
