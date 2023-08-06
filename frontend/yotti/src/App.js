@@ -1,11 +1,13 @@
 import "./index.css";
 
 import Nav from "./components/navigation/Nav";
+import Main from "./components/body/Main";
 
 function App() {
   return (
     <div className="">
       <Nav />
+      <Main />
     </div>
   );
 }
