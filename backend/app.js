@@ -1,8 +1,10 @@
 const express = require("express");
 const globalErrorHandler = require("./controllers/errorController");
-const firebaseAuth = require("./src/firebase/auth"); // Update this line
-const favoritesController = require("./src/favorites/favoritesController"); // Update this line
-const recommendationsController = require("./src/recommendations/recommendationsController"); // Update this line
+const firebaseAuth = require("./src/firebase/auth");
+const favoritesController = require("./src/favorites/favoritesController");
+const recommendationsController = require("./src/recommendations/recommendationsController");
+// Import the lyricsController
+const lyricsController = require('./src/lyrics/lyricsController');
 /*const spotifyAPI = require("../Spotify/spotifyAPI"); // Update this line*/
 
 const app = express();
@@ -13,6 +15,8 @@ const app = express();
 app.post("/add-to-favorites", favoritesController.addToFavorites);
 app.delete("/remove-from-favorites", favoritesController.removeFromFavorites);
 app.get("/favorites", favoritesController.getFavorites);
+// Use the lyricsController for the /lyrics route
+app.use('/lyrics', lyricsController);
 
 // Song recommendations route
 app.get("/recommendations", recommendationsController.getRecommendationsForUser);
@@ -31,7 +35,6 @@ app.post("/signup", async(req, res) => {
     }
 });
 
-// ... (other route handlers if any)
 
 app.post("/post-feedback", async(req, res) => {
     const { name, email, message } = req.body;
@@ -47,8 +50,6 @@ app.post("/post-feedback", async(req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
-
-// ... (other route handlers and middleware)
 
 // Error handling middleware
 app.use(globalErrorHandler);
