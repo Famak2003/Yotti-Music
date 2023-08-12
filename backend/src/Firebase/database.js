@@ -70,8 +70,27 @@ async function getFavoriteSongs(userId) {
     }
 }
 
+// Function to create or update user in MongoDB based on Firebase UID
+async function createOrUpdateUserInDatabase(firebaseUid) {
+    try {
+        // Find the user's data in the database based on the userId
+        let userData = await UserDataModel.findOne({ userId: firebaseUid });
+
+        // If user data does not exist, create a new entry for the user
+        if (!userData) {
+            userData = new UserDataModel({ userId: firebaseUid });
+            await userData.save();
+        }
+
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+
 module.exports = {
     saveFavoriteSong,
     removeFavoriteSong,
     getFavoriteSongs,
+    createOrUpdateUserInDatabase,
 };

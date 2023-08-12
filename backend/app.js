@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const express = require("express");
 const globalErrorHandler = require("./controllers/errorController");
 const firebaseAuth = require("./src/firebase/auth");
+const database = require("./src/database/database");
 const favoritesController = require("./src/favorites/favoritesController");
 const recommendationsController = require("./src/recommendations/recommendationsController");
 // Import the lyricsController
@@ -21,11 +24,16 @@ app.use('/lyrics', lyricsController);
 // Song recommendations route
 app.get("/recommendations", recommendationsController.getRecommendationsForUser);
 
+// Handle user signup
 app.post("/signup", async(req, res) => {
     const { email, password } = req.body;
 
     try {
+        // Create a user in Firebase Authentication
         const userRecord = await firebaseAuth.createUser(email, password);
+
+        // Associate Firebase UID with MongoDB document
+        await database.createOrUpdateUserInDatabase(userRecord.uid);
 
         // User creation successful, return a success response or token to the client
         res.status(200).json({ message: "User created successfully!", userRecord });
