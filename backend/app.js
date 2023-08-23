@@ -36,6 +36,39 @@ app.get("/recommendations", recommendationsController.getRecommendationsForUser)
 dotenv.config();
 app.use(bodyParser.json());
 
+
+// Spotify API base URL
+const SPOTIFY_API_BASE_URL = process.env.SPOTIFY_API_BASE_URL;
+
+// Spotify API token
+const SPOTIFY_API_TOKEN = process.env.customToken;
+
+
+
+// Define a route to serve songs
+app.get('/api/songs', async(req, res) => {
+    try {
+        // Example: Fetch songs from Spotify API (you can adapt this based on your needs)
+        const response = await axios.get(`${SPOTIFY_API_BASE_URL}/search`, {
+            headers: {
+                Authorization: `Bearer ${SPOTIFY_API_TOKEN}`,
+            },
+            params: {
+                q: 'Your search query', // Replace with your search query
+                type: 'track',
+            },
+        });
+
+        // Extract and send the list of songs
+        const songs = response.data.tracks.items;
+        res.json(songs);
+    } catch (error) {
+        console.error('Error fetching songs from Spotify:', error);
+        res.status(500).json({ error: 'Failed to fetch songs' });
+    }
+});
+
+
 // Endpoint to obtain Spotify access token after user login or signup
 app.post('/get-spotify-token', async(req, res) => {
     try {
