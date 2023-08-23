@@ -78,9 +78,9 @@ app.post('/get-spotify-token', async(req, res) => {
         // Obtain Spotify access token
         const spotifyAccessToken = await getSpotifyAccessToken();
 
-        // Store the access token along with the user's Firebase UID (you can use your database logic here)
+        // Store the access token along with the user's Firebase UID
         // For example, you could use Firebase Firestore or MongoDB
-        // Your logic to store the token...
+        // logic to store the token...
 
         res.status(200).json({ message: 'Spotify access token obtained successfully' });
     } catch (error) {
