@@ -16,7 +16,12 @@ body {
   background-image: linear-gradient(black, gray);
   background-repeat: no-repeat;
   background-position: center;
+  overflow-x: hidden;
   object-fit: fill;
+}
+
+html{
+  overflow-x: hidden;
 }
 
 /* Loader */
@@ -51,7 +56,7 @@ img {
 
 @layer components {
   .playFunction {
-    @apply flex h-[100%] w-[1.3rem] min-w-[0.5rem] items-center;
+    @apply flex h-[100%] ring-2 w-[.8rem] md:w-[1.3rem] min-w-[0.5rem] items-center;
   }
   .zimba {
     @apply hidden rounded-lg;
@@ -79,6 +84,9 @@ img {
 
 /* To give downloaded botton space to span out a bit */
 @media (max-width: 1137px) {
+  html{
+    font-size: 90%;
+  }
   .downloaded {
     font-size: 14px;
     gap: 0;

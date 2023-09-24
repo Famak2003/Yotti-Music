@@ -11,13 +11,13 @@ export default function MainNav({ onHandleSubmit }) {
     <div className="mainNav correctHeight flex w-[100%] flex-col justify-center gap-1  ">
       <input
         onSubmit={onHandleSubmit}
-        className=" h-6 w-[50%] self-center rounded-sm bg-black pb-[0.35rem] pl-[1rem] pr-[0.5rem] pt-[0.3rem] text-[0.8rem] text-white ring-1 ring-stone-600 duration-300 focus:h-8 focus:pb-[0.28rem] focus:pt-[0.2rem] focus:ring-1 focus:ring-white"
+        className="h-[30%] w-[50%] self-center rounded-sm bg-black pb-[0.35rem] pl-[1rem] pr-[0.5rem] pt-[0.3rem] text-[.6rem] md:text-[.8rem] text-white ring-1 ring-stone-600 duration-300 focus:h-8 focus:pb-[0.28rem] focus:pt-[0.2rem] focus:ring-1 focus:ring-white"
         placeholder={`Search any music, playlist, album here`}
         type="search"
       />
-      <div className="musicControl  flex h-[2.9rem] items-center justify-center bg-stone-600  ">
+      <div className="musicControl  flex h-[70%] ring-2 items-center justify-center bg-stone-600  ">
         {/* music play functionalities */}
-        <ul className="playFunc  flex h-[100%] w-[25%] items-center justify-center gap-2  ">
+        <ul className="playFunc  flex h-[100%] w-[25%] items-center justify-around  ">
           <li className="  playFunction ">
             <img className="  object-contain" src={SHUFFLE} alt="shuffle" />
           </li>
@@ -45,8 +45,8 @@ export default function MainNav({ onHandleSubmit }) {
             />
           </div>
           <div className="lyrics correctHeight flex w-[85%] flex-col items-center justify-center border-b-red-300 pb-2 pt-3">
-            <p className=" text-sm">Yoga Yoga</p>
-            <small className=" text-xs text-gray-700"> I dey on my way</small>
+            <p className=" text-sm text-white">Yoga Yoga</p>
+            <small className=" text-xs text-gray-400"> I dey on my way</small>
           </div>
         </div>
 

@@ -26,20 +26,24 @@ module.exports = {
           250: "#f2f2f5",
           200: "#ffffff",
         },
-      },
-      theme: {
-        sreens: {
+        screens: {
           tablet: "640px",
           // => @media (min-width: 640px) {...}
-
+  
           laptop: "1024px",
           // => @media (min-width: 1024px) {...}
-
+  
           desktop: "1280px",
           // => @media (min-width: 1280px) {...}
+
+          xl: '1124px',
+
+          mobile: '420px',
+          lmobile: '500px',
+          smobile: '300px'
         },
       },
-    },
+      },
   },
   plugins: [],
 };
