@@ -1,7 +1,7 @@
 import "./index.css";
 
-import Main from "./components/body/Main";
 import Nav from "./components/navbar/Nav";
+import Main from "./components/body/Main";
 
 function App() {
   return (

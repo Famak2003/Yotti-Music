@@ -16,10 +16,15 @@ body {
   background-image: linear-gradient(black, gray);
   background-repeat: no-repeat;
   background-position: center;
+  overflow-x: hidden;
   object-fit: fill;
 }
 
-/* https://dev.to.afif/o-made-100-css-loaders-for-your-next-project-4eje */
+html{
+  overflow-x: hidden;
+}
+
+/* Loader */
 .loader {
   width: 45px;
   aspect-ratio: 0.75;
@@ -51,7 +56,7 @@ img {
 
 @layer components {
   .playFunction {
-    @apply flex h-[100%] w-[1rem] min-w-[0.5rem] items-center;
+    @apply flex h-[100%] w-[.8rem] md:w-[1.3rem] min-w-[0.5rem] items-center;
   }
   .zimba {
     @apply hidden rounded-lg;
@@ -66,6 +71,7 @@ img {
   .correctScale {
     transform: scale(0.8);
   }
+
   .correctHeight {
     height: inherit;
     /* border: 1px solid green; */
@@ -73,5 +79,16 @@ img {
   .musicGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* To give downloaded botton space to span out a bit */
+@media (max-width: 1137px) {
+  html{
+    font-size: 90%;
+  }
+  .downloaded {
+    font-size: 14px;
+    gap: 0;
   }
 }

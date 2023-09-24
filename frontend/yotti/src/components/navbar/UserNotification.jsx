@@ -3,7 +3,8 @@ import USER from "./../../assets/user.png";
 
 export default function UserNotification() {
   return (
-    <ul className=" correctHeight flex w-[100%] items-center justify-center  gap-9 pl-[3rem] pr-[4rem]">
+    <ul className=" correctHeight flex w-[100%] items-center justify-center gap-9">
+      {/* <li className="text-white">hello there</li> */}
       <li className=" w-[1rem] min-w-[.7rem] ">
         <img
           className=" h-4 object-contain "

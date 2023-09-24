@@ -8,10 +8,11 @@ export default function Nav() {
     console.log("work in progress");
   }
   return (
-    <nav className=" grid w-[100vw] grid-cols-[12.5%_70%_17.5%] bg-black sm:h-[4rem] lg:h-[3.5rem]  ">
+    <nav className=" grid w-[100%] ring grid-cols-[13%_70%_17%] ring-red-500 bg-black h-[14vh] ">
       <Logo />
       <MainNav onHandleSubmit={handleSubmit} />
       <UserNotification />
     </nav>
   );
 }
+

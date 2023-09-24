@@ -1,3 +1,4 @@
+import './Main.css'
 import SONGPROFILEIMG from "./../../assets/playing.png";
 
 const artist = [
@@ -25,26 +26,31 @@ const artist = [
 
 export default function Collections({ title }) {
   return (
-    <div className=" h-fit overflow-x-scroll rounded-lg px-[1rem] py-[1rem] ring-1 ring-gray-400">
-      <h2>{title}</h2>
-      <ul className=" musicGrid w-[65rem] px-[1rem] ">
-        {artist.map((obj) => (
-          <Album key={obj.id} img={obj.image}>
-            {obj.artistName}
-          </Album>
-        ))}
-      </ul>
+    <div className=" carousel relative">
+      <div className="cover pointer-events-none absolute inset-0 inset-y-0 right-0 z-[10] h-[100%] w-[100%] bg-gradient-to-r from-transparent via-transparent to-black"></div>
+      <div className="carousel relative h-fit overflow-x-scroll rounded-lg  pl-[1rem] ring-1 ring-gray-400 ">
+        <h2>{title}</h2>
+
+        <ul className=" musicGrid w-[65rem] px-[1rem]  ">
+          {artist.map((obj) => (
+            <Album key={obj.id} img={obj.image}>
+              {obj.artistName}
+            </Album>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
 function Album({ img, children }) {
   return (
-    <li className=" w-fit">
-      <div className=" h-[5rem] w-[100%]">
+    <li className="w-fit">
+      <div onClick={() => console.log("hey")} className=" h-[5rem] w-[100%]">
         <img className=" object-center" src={img} alt="music-profile-img" />
       </div>
       <small>{children}</small>
     </li>
   );
 }
+
