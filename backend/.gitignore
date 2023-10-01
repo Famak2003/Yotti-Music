@@ -1,0 +1,12 @@
+#ignore files
+/node_modules
+*.env
+
+#ignore form.html
+form.html
+
+#ignore success.html
+success.html
+
+#ignore sak
+/sak
