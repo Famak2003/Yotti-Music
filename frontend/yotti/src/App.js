@@ -3,11 +3,15 @@ import "./index.css";
 import Nav from "./components/navbar/Nav";
 import Main from "./components/body/Main";
 
-function App() {
+
+
+function App() {  
   return (
-    <div className="">
+    <div className="" >
       <Nav />
       <Main />
+     
+     
     </div>
   );
 }

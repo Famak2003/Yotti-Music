@@ -1,6 +1,7 @@
 import NOTIFICATION from "./../../assets/notification.png";
 import USER from "./../../assets/user.png";
 
+
 export default function UserNotification() {
   return (
     <ul className=" correctHeight flex w-[100%] items-center justify-center gap-9">
@@ -12,7 +13,7 @@ export default function UserNotification() {
           alt="notification"
         />
       </li>
-      <li className="w-[1rem] min-w-[.7rem] ">
+      <li className="w-[1rem] min-w-[.7rem] sm:flex hidden ">
         <img className="  h-4 object-contain " src={USER} alt="user" />
       </li>
     </ul>
