@@ -8,11 +8,10 @@ export default function Nav() {
     console.log("work in progress");
   }
   return (
-    <nav className=" fixed top-0 grid w-[100%] grid-cols-[13%_70%_17%] bg-black h-[5rem] z-50 ">
+    <nav className=" fixed top-0 z-50 grid h-[5rem] w-[100%] grid-cols-[13%_70%_17%] bg-black ">
       <Logo />
       <MainNav onHandleSubmit={handleSubmit} />
       <UserNotification />
     </nav>
   );
 }
-

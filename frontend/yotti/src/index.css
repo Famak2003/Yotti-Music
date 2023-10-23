@@ -92,3 +92,6 @@ img {
     gap: 0;
   }
 }
+.SideBarTransition{
+  transition: 0.7s all ease-in-out;
+}

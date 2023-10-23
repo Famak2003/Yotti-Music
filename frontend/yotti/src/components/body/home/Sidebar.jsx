@@ -25,8 +25,7 @@ const libraryContent = [
 
 export default function SideBar() {
   return (
-    <section className=" fixed w-[13%] top-[5rem] bg-gradient-to-b from-zinc-700 to-gray-850 py-1.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] ">
-    
+    <section className="  to-gray-850 w-[100%] bg-gradient-to-b from-zinc-700 py-1.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] ">
       <div className="flex h-screen w-full flex-col items-center gap-4">
         <div className=" flex w-full items-center justify-center  ">
           <h2 className="rounded bg-green-600 py-[.1rem] text-sm ">

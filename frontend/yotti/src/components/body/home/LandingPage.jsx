@@ -1,18 +1,16 @@
-
 import Browser from "./Browser";
-
 
 import Collections from "./Collections";
 
 export default function Main() {
   return (
-      <section className=" flex flex-col gap-[2rem] py-[5rem] overflow-x-hidden px-[1.5rem] ">
-        <Browser />
-        <Collections title={"Discover an Artist"} />
-        <Collections title={"Top Albums"} />
-        <Collections title={"Playlists For You"} />
-        <Collections title={"Popular Genres"} />
-      </section>
+    <section className=" flex flex-col gap-[2rem] overflow-x-hidden px-[1.5rem] py-[5rem] ">
+      <Browser />
+      <Collections title={"Discover an Artist"} />
+      <Collections title={"Top Albums"} />
+      <Collections title={"Playlists For You"} />
+      <Collections title={"Popular Genres"} />
+    </section>
   );
 }
 
