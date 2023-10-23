@@ -1,7 +1,7 @@
-import chevleft from "./../../assets/chevron-left.png";
-import chevright from "./../../assets/chevron-right.png";
-import rectangle from "./../../assets/Rectangle 7.png";
-import rect from "./../../assets/Rectangle 6.png";
+import chevleft from "./../../../assets/chevron-left.png";
+import chevright from "./../../../assets/chevron-right.png";
+import rectangle from "./../../../assets/Rectangle 7.png";
+import rect from "./../../../assets/Rectangle 6.png";
 
 const browseData = [
   {

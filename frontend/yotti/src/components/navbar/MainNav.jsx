@@ -15,22 +15,22 @@ export default function MainNav({ onHandleSubmit }) {
         placeholder={`Search any music, playlist, album here`}
         type="search"
       />
-      <div className="musicControl  flex h-[70%] ring-2 items-center justify-center bg-stone-600  ">
+      <div className="musicControl flex h-[2.9rem] items-center justify-center bg-stone-600  ">
         {/* music play functionalities */}
-        <ul className="playFunc  flex h-[100%] w-[25%] items-center justify-around  ">
-          <li className="  playFunction ">
+        <ul className="playFunc gap-2 flex h-[100%] w-[25%] items-center justify-center  ">
+          <li className=" cursor-pointer playFunction ">
             <img className="  object-contain" src={SHUFFLE} alt="shuffle" />
           </li>
-          <li className="  playFunction">
+          <li className=" cursor-pointer playFunction">
             <img className="  object-contain" src={PREVIEW} alt="preview" />
           </li>
-          <li className="  playFunction">
+          <li className=" cursor-pointer playFunction">
             <img className="  object-contain" src={PLAY} alt="play" />
           </li>
-          <li className="  playFunction">
+          <li className=" cursor-pointer playFunction">
             <img className="  object-contain" src={NEXT} alt="next" />
           </li>
-          <li className="  playFunction">
+          <li className=" cursor-pointer playFunction">
             <img className="  object-contain" src={REPEAT} alt="repeat" />
           </li>
         </ul>
@@ -44,7 +44,7 @@ export default function MainNav({ onHandleSubmit }) {
               alt="song"
             />
           </div>
-          <div className="lyrics correctHeight flex w-[85%] flex-col items-center justify-center border-b-red-300 pb-2 pt-3">
+          <div className="lyrics correctHeight flex w-[85%] flex-col items-center justify-center pb-2 pt-3">
             <p className=" text-sm text-white">Yoga Yoga</p>
             <small className=" text-xs text-gray-400"> I dey on my way</small>
           </div>
@@ -52,7 +52,7 @@ export default function MainNav({ onHandleSubmit }) {
 
         {/* Music Volume */}
         <ul className="volume correctHeight flex w-[20%]  items-center justify-center bg-stone-700 px-[1.5rem] ">
-          <li className="  w-[1rem] min-w-[0.75] ">
+          <li className="  w-[1rem] min-w-[0.75] cursor-pointer ">
             <img className="  h-4 object-contain" src={VOLUME} alt="volume" />
           </li>
           <li className=" m-0 flex w-[5rem] justify-start p-0 text-start ">

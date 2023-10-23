@@ -1,13 +1,13 @@
-import grid from "./../../assets/gridNew.png";
-import album from "./../../assets/Frame 27.png";
-import genre from "./../../assets/Frame 28.svg";
-import artist from "./../../assets/microphone.svg";
-import music from "./../../assets/music.svg";
-import list from "./../../assets/Frame 28.png";
-import heart from "./../../assets/heart.svg";
-import cloud from "./../../assets/download-cloud.svg";
-import chevdown from "./../../assets/chevron-down.svg";
-import info from "./../../assets/info.svg";
+import grid from "./../../../assets/gridNew.png";
+import album from "./../../../assets/Frame 27.png";
+import genre from "./../../../assets/Frame 28.svg";
+import artist from "./../../../assets/microphone.svg";
+import music from "./../../../assets/music.svg";
+import list from "./../../../assets/Frame 28.png";
+import heart from "./../../../assets/heart.svg";
+import cloud from "./../../../assets/download-cloud.svg";
+import chevdown from "./../../../assets/chevron-down.svg";
+import info from "./../../../assets/info.svg";
 
 const musicContent = [
   { image: grid, name: "Browse" },
@@ -25,7 +25,7 @@ const libraryContent = [
 
 export default function SideBar() {
   return (
-    <section className="  w-[100%] bg-gradient-to-b from-zinc-700 to-gray-850 py-1.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] ">
+    <section className=" fixed w-[13%] top-[5rem] bg-gradient-to-b from-zinc-700 to-gray-850 py-1.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] ">
     
       <div className="flex h-screen w-full flex-col items-center gap-4">
         <div className=" flex w-full items-center justify-center  ">

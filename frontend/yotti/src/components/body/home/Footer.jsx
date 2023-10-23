@@ -1,9 +1,9 @@
 // import Logo from "../navbar/Logo";
-import LOGO from "./../../assets/logo.png";
+import LOGO from "./../../../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-col items-center justify-center gap-[1rem] bg-gray-800 px-[2rem] py-[1rem]">
+    <footer className=" flex flex-col text-white items-center justify-center gap-[1rem] bg-gray-800 px-[2rem] py-[1rem]">
       <div>
         <h2>Sponsors</h2>
       </div>

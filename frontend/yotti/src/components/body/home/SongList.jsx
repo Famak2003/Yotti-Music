@@ -1,6 +1,6 @@
 export default function SongList() {
   return (
-    <section className="h-[25rem] w-full rounded-b-lg bg-zinc-700 px-1.5 py-0.5 text-gray-400">
+    <section className="h-[25rem] fixed w-[17%] top-[5rem] rounded-b-lg bg-zinc-700 px-1.5 py-0.5 text-gray-400">
       {/* This whole section is supposed to be fixed */}
       <div>
         <h5 className=" pb-1 text-white">Recent</h5>

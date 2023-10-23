@@ -1,4 +1,4 @@
-import SONGPROFILEIMG from "./../../assets/playing.png";
+import SONGPROFILEIMG from "./../../../assets/playing.png";
 
 const artist = [
   { image: SONGPROFILEIMG, artistName: "Rema", id: 1 },

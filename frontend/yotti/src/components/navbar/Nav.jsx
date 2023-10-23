@@ -8,7 +8,7 @@ export default function Nav() {
     console.log("work in progress");
   }
   return (
-    <nav className=" grid w-[100%] ring grid-cols-[13%_70%_17%] ring-red-500 bg-black h-[14vh] ">
+    <nav className=" fixed top-0 grid w-[100%] grid-cols-[13%_70%_17%] bg-black h-[5rem] z-50 ">
       <Logo />
       <MainNav onHandleSubmit={handleSubmit} />
       <UserNotification />

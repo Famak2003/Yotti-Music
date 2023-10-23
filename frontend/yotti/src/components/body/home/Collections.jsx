@@ -1,5 +1,5 @@
-import './Main.css'
-import SONGPROFILEIMG from "./../../assets/playing.png";
+import './LandingPage.css'
+import SONGPROFILEIMG from "./../../../assets/playing.png";
 
 const artist = [
   { image: SONGPROFILEIMG, artistName: "Rema", id: 1 },
@@ -29,7 +29,7 @@ export default function Collections({ title }) {
     <div className=" carousel relative">
       <div className="cover pointer-events-none absolute inset-0 inset-y-0 right-0 z-[10] h-[100%] w-[100%] bg-gradient-to-r from-transparent via-transparent to-black"></div>
       <div className="carousel relative h-fit overflow-x-scroll rounded-lg  pl-[1rem] ring-1 ring-gray-400 ">
-        <h2>{title}</h2>
+        <h2 className=' sticky left-0'>{title}</h2>
 
         <ul className=" musicGrid w-[65rem] px-[1rem]  ">
           {artist.map((obj) => (
