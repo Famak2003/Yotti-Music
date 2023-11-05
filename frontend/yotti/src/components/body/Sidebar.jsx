@@ -1,13 +1,4 @@
-import grid from "./../../assets/gridNew.png";
-import album from "./../../assets/Frame 27.png";
-import genre from "./../../assets/Frame 28.svg";
-import artist from "./../../assets/microphone.svg";
-import music from "./../../assets/music.svg";
-import list from "./../../assets/Frame 28.png";
-import heart from "./../../assets/heart.svg";
-import cloud from "./../../assets/download-cloud.svg";
-import chevdown from "./../../assets/chevron-down.svg";
-import info from "./../../assets/info.svg";
+import { grid, album, genre, artist, music, list, heart, cloud, chevdown, info, } from "../../assets";
 
 const musicContent = [
   { image: grid, name: "Browse" },
@@ -43,7 +34,7 @@ export default function SideBar() {
                   {item.name}
                 </SideButton>
               ))}
-            </ul>
+            </ul> 
           </div>
 
           <div className="Library flex h-fit flex-col gap-6 ">

@@ -2,6 +2,9 @@ import "./index.css";
 
 import Nav from "./components/navbar/Nav";
 import Main from "./components/body/Main";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/body/Layout";
+import Profile from "./components/body/Profile";
 
 
 
@@ -9,7 +12,17 @@ function App() {
   return (
     <div className="" >
       <Nav />
-      <Main />
+     
+
+      <Routes>
+       
+          <Route path="/" element={ <Main />}> 
+          <Route path="/" element={<Layout />} />
+          <Route path="/profile" element={<Profile />} />
+          
+          </Route>
+       
+      </Routes>
      
      
     </div>
