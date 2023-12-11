@@ -7,31 +7,18 @@ const {
     getRecommendations,
 } = require('./spotifyAPI'); // Import your Spotify API functions
 
+const { searchSongsRoute } = require('./spotifyController');
+
+
+
 // Spotify API base URL
 const SPOTIFY_API_BASE_URL = process.env.SPOTIFY_API_BASE_URL;
 // Spotify API token
-const SPOTIFY_API_TOKEN = process.env.customToken;
+const SPOTIFY_API_TOKEN = process.env.SPOTIFY_API_TOKEN;
 
 
 
-// Define routes for interacting with Spotify
-router.get('/search-songs', async(req, res) => {
-    const { query, userId } = req.query;
 
-    try {
-        // Retrieve the user's Spotify access token based on their Firebase UID
-        const spotifyAccessToken = await getSpotifyAccessTokenForUser(userId);
-
-        // Use the obtained access token to make Spotify API requests
-        const songs = await searchSongs(spotifyAccessToken, query);
-
-        res.status(200).json({ songs });
-    } catch (error) {
-        // Handle specific errors related to Spotify API
-        console.error('Error searching for songs:', error);
-        res.status(500).json({ error: 'Failed to search for songs' });
-    }
-});
 
 // Function to get the Spotify access token for a user
 async function getSpotifyAccessTokenForUser(userId) {
@@ -40,6 +27,9 @@ async function getSpotifyAccessTokenForUser(userId) {
     // Make sure the token is not expired.
 }
 
+
+// Define routes for interacting with Spotify
+router.get('/search-songs', searchSongsRoute);
 
 // Define a route to serve songs
 router.get('/api/songs', async(req, res) => {

@@ -15,11 +15,14 @@ const { getSpotifyAccessToken } = require('./src/spotify/spotifyAuth'); // Impor
 // Import your Spotify API functions
 //const { searchSongs, getSongDetails, getRecommendations, makeSpotifyRequest } = require('./src/spotify/spotifyAPI'); // Import Spotify API functions
 const { simulateUserAuthentication } = require('./src/firebase/authUtils'); // Import the function
+const spotifyRoutes = require('./src/spotify/spotifyRoutes');
+
 
 
 const app = express();
 
 // ... (other middleware and route handlers if any)
+app.use('/', spotifyRoutes);
 
 // User favorites routes
 app.post("/add-to-favorites", favoritesController.addToFavorites);

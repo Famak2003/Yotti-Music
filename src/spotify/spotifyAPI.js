@@ -28,7 +28,7 @@ async function searchSongs(token, query) {
             type: "track",
         });
 
-        return response.tracks.items;
+        return response; // Return the entire JSON response
     } catch (error) {
         throw error;
     }
@@ -56,9 +56,24 @@ async function getRecommendations(token, seedTracks) {
         throw error;
     }
 }
+// Function to play a track using the Spotify Web Playback SDK
+async function playTrack(token, deviceId, uri) {
+    try {
+        await axios.put(
+            `${SPOTIFY_API_BASE_URL}/me/player/play?device_id=${deviceId}`, { uris: [uri] }, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            }
+        );
+    } catch (error) {
+        throw error.response.data.error;
+    }
+}
 
 module.exports = {
     searchSongs,
     getSongDetails,
     getRecommendations,
+    playTrack, // Add this function
 };
